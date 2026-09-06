@@ -32,6 +32,12 @@
     }
 
     .admin-nav h2 { font-family: var(--fuente-titulos); font-size: 1.4rem; color: var(--color-acento); }
+    .logo-img {
+      height: 100px;
+      width: auto;
+      object-fit: contain;
+      border-radius: 50px 50px;
+    }
 
     .btn-cerrar {
       background: transparent;
@@ -119,6 +125,7 @@
 <body>
 
   <header class="admin-nav">
+    <img src="./../../public/assets/images/logo-el-morenito.png" alt="" class="logo-img" > 
     <h2>🔨 El Morenito | Panel Admin</h2>
     <div>
       <a href="servicios.html" style="color: #cbd5e1; margin-right: 1.2rem; text-decoration: none;">Ver Catálogo Público</a>
@@ -160,7 +167,11 @@
 
   <script>
     const token = localStorage.getItem('token_morenito');
-    if (!token) {
+    const rol = localStorage.getItem('usuario_rol');
+
+    if (!token || rol !== 'admin') {
+      localStorage.removeItem('token_morenito');
+      localStorage.removeItem('usuario_rol');
       window.location.href = 'login.html';
     }
 

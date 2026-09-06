@@ -187,7 +187,14 @@
 
         if (respuesta.ok && (data.token || (data.datos && data.datos.token))) {
           const token = data.token || data.datos.token;
+          const usuario = data.usuario || (data.datos && data.datos.usuario);
+
+          if (usuario && usuario.rol !== 'admin') {
+            throw new Error('Acceso denegado: Tu cuenta no tiene permisos de Administrador.');
+          }
+
           localStorage.setItem('token_morenito', token);
+          localStorage.setItem('usuario_rol', usuario ? usuario.rol : 'admin');
           window.location.href = 'admin.html';
         } else {
           throw new Error(data.mensaje || 'Credenciales incorrectas');

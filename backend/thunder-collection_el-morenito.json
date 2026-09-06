@@ -1,0 +1,54 @@
+{
+  "clientName": "Thunder Client",
+  "collectionName": "API El Morenito",
+  "dateExported": "2026-09-06",
+  "version": "1.1",
+  "folders": [],
+  "requests": [
+    {
+      "name": "1. Listar Servicios (Paginado)",
+      "url": "http://localhost:5000/api/servicios?pagina=1&limite=6",
+      "method": "GET"
+    },
+    {
+      "name": "2. Obtener Servicio por ID",
+      "url": "http://localhost:5000/api/servicios/1",
+      "method": "GET"
+    },
+    {
+      "name": "3. Login Administrador",
+      "url": "http://localhost:5000/api/auth/login",
+      "method": "POST",
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"email\": \"admin@elmorenito.com\",\n  \"password\": \"AdminMorenito2026!\"\n}"
+      }
+    },
+    {
+      "name": "4. Crear Servicio (Protegido)",
+      "url": "http://localhost:5000/api/servicios",
+      "method": "POST",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer TU_TOKEN_JWT_AQUI"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"titulo\": \"Instalación de Pérgola Metálica\",\n  \"descripcion\": \"Fabricación y montaje de estructura a medida con pintura anticorrosiva.\",\n  \"categoria\": \"Cerrajería\",\n  \"imagen_url\": \"https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80\"\n}"
+      }
+    },
+    {
+      "name": "5. Eliminar Servicio (Protegido)",
+      "url": "http://localhost:5000/api/servicios/13",
+      "method": "DELETE",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer TU_TOKEN_JWT_AQUI"
+        }
+      ]
+    }
+  ]
+}
