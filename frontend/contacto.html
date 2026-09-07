@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>El Morenito | Reformas Integrales, Construcción y Cerrajería en Murcia</title>
-  <meta name="description" content="Especialistas en reformas completas de viviendas, albañilería, fontanería, cerrajería y pintura en San Pedro del Pinatar y toda la región de Murcia.">
+  <title>Contacto y Presupuesto | El Morenito</title>
+  <meta name="description" content="Pide tu presupuesto sin compromiso para reformas, obras o cerrajería en San Pedro del Pinatar, Murcia. Contacta con El Morenito.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+
   <style>
     :root {
       --color-primario: #1e293b;
@@ -107,79 +107,8 @@
       background-color: var(--color-acento-hover);
     }
 
-    .btn-secundario {
-      background-color: transparent;
-      color: #fff;
-      border: 2px solid #fff;
-      padding: 0.6rem 1.4rem;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: var(--transicion);
-      display: inline-block;
-    }
-
-    .btn-secundario:hover {
-      background-color: rgba(255,255,255,0.15);
-      border-color: var(--color-acento);
-      color: var(--color-acento);
-    }
-
-    /* Hero */
-    .hero {
-      background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.86) 100%),
-                  url('https://images.unsplash.com/photo-1541888946425-d0fbb18615f8?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-      color: #fff;
-      padding: 6.5rem 2rem;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .hero-content {
-      max-width: 850px;
-    }
-
-    .hero-badge {
-      display: inline-block;
-      background: rgba(245, 158, 11, 0.2);
-      color: var(--color-acento);
-      border: 1px solid var(--color-acento);
-      padding: 0.35rem 1rem;
-      border-radius: 30px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero h1 {
-      font-family: var(--fuente-titulos);
-      font-size: 3.2rem;
-      line-height: 1.15;
-      font-weight: 800;
-      margin-bottom: 1.2rem;
-      text-transform: uppercase;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: #cbd5e1;
-      margin-bottom: 2.2rem;
-      line-height: 1.7;
-    }
-
-    .hero-botones {
-      display: flex;
-      justify-content: center;
-      gap: 1.2rem;
-      flex-wrap: wrap;
-    }
-
-    /* ZONA GRIS CON TEXTURA DE FONDO VISIBLE */
-    .zona-servicios-fondo {
+    /* Contenedor Principal con textura */
+    .contacto-wrapper {
       position: relative;
       background-color: #e2e8f0;
       background-image: linear-gradient(rgba(241, 245, 249, 0.88), rgba(241, 245, 249, 0.88)), 
@@ -187,12 +116,12 @@
       background-attachment: fixed;
       background-size: cover;
       background-position: center;
-      padding: 5rem 1.5rem;
+      padding: 4rem 1.5rem 5rem;
       flex: 1 0 auto;
     }
 
     .contenedor {
-      max-width: 1280px;
+      max-width: 1200px;
       margin: 0 auto;
       width: 100%;
     }
@@ -202,9 +131,9 @@
       margin-bottom: 3.5rem;
     }
 
-    .seccion-titulo h2 {
+    .seccion-titulo h1 {
       font-family: var(--fuente-titulos);
-      font-size: 2.4rem;
+      font-size: 2.5rem;
       color: var(--color-primario);
       margin-bottom: 0.6rem;
     }
@@ -216,74 +145,137 @@
       margin: 0 auto;
     }
 
-    /* Tarjetas de ventajas */
-    .grid-ventajas {
+    /* Grid Formulario e Información */
+    .grid-contacto {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-      margin-bottom: 4rem;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2.5rem;
     }
 
-    .card-ventaja {
+    .card-contacto {
       background: var(--color-tarjeta);
       backdrop-filter: blur(6px);
       border: 1px solid rgba(203, 213, 225, 0.9);
       border-radius: 12px;
-      padding: 2.2rem 1.8rem;
-      text-align: center;
-      transition: var(--transicion);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      padding: 2.5rem;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.06);
     }
 
-    .card-ventaja:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 24px -3px rgba(0,0,0,0.12);
-      border-color: var(--color-acento);
-    }
-
-    .card-ventaja .icono {
-      font-size: 2.6rem;
-      margin-bottom: 1.2rem;
-      display: inline-block;
-    }
-
-    .card-ventaja h3 {
+    .card-contacto h2 {
       font-family: var(--fuente-titulos);
-      font-size: 1.3rem;
+      font-size: 1.6rem;
       color: var(--color-primario);
-      margin-bottom: 0.6rem;
+      margin-bottom: 1.2rem;
     }
 
-    .card-ventaja p {
-      color: var(--color-texto-mutado);
+    /* Campos de Formulario */
+    .form-group {
+      margin-bottom: 1.3rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--color-primario);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--color-borde);
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s;
+      background-color: #fff;
+    }
+
+    .form-control:focus {
+      border-color: var(--color-acento);
+      box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .btn-enviar {
+      width: 100%;
+      background-color: var(--color-acento);
+      color: #fff;
+      padding: 0.9rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .btn-enviar:hover {
+      background-color: var(--color-acento-hover);
+    }
+
+    /* Datos Rápidos de Contacto */
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .info-icono {
+      font-size: 1.6rem;
+      background: #f1f5f9;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+
+    .info-texto h3 {
+      font-family: var(--fuente-titulos);
+      font-size: 1.15rem;
+      color: var(--color-primario);
+      margin-bottom: 0.2rem;
+    }
+
+    .info-texto p, .info-texto a {
+      color: var(--color-texto);
+      text-decoration: none;
       font-size: 0.95rem;
     }
 
-    /* Banner CTA */
-    .banner-cta {
-      background: var(--color-primario);
-      color: #fff;
-      border-radius: 16px;
-      padding: 3.5rem 2rem;
+    .info-texto a:hover {
+      color: var(--color-acento);
+    }
+
+    .whatsapp-box {
+      margin-top: 2rem;
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      border-radius: 8px;
+      padding: 1.2rem;
       text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.2);
     }
 
-    .banner-cta h2 {
-      font-family: var(--fuente-titulos);
-      font-size: 2.2rem;
-      color: #fff;
+    .whatsapp-box p {
+      color: #065f46;
+      font-size: 0.9rem;
       margin-bottom: 0.8rem;
-    }
-
-    .banner-cta p {
-      color: #cbd5e1;
-      font-size: 1.1rem;
-      max-width: 600px;
-      margin-bottom: 2rem;
+      font-weight: 500;
     }
 
     /* Footer */
@@ -355,86 +347,137 @@
       transform: scale(1.08);
     }
 
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2.3rem; }
-      .hero p { font-size: 1rem; }
-      .navbar { padding: 0.8rem 1.2rem; }
-      .nav-links { display: none; }
+    @media (max-width: 850px) {
+      .grid-contacto {
+        grid-template-columns: 1fr;
+      }
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        display: none;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
+  <!-- Barra de Navegación -->
   <header class="navbar">
-    <a href="index.html" class="logo-brand">
+    <a href="../../index.html" class="logo-brand">
       <!-- <img src="https://refomaselmorenito.com/wp-content/uploads/2024/02/cropped-logo-morenito.png" alt="Logo El Morenito" class="logo-img" onerror="this.src='https://el-morenito.web.app/assets/images/logo.png'"> -->
-      <img src="public/assets/images/logo-el-morenito.png" alt="" class="logo-img" >
+      <img src="./../../public/assets/images/logo-el-morenito.png" alt="" class="logo-img" > 
       <span>EL MORENITO</span>
     </a>
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Inicio</a></li>
+      <li><a href="../../index.html">Inicio</a></li>
       <li><a href="servicios.html">Servicios</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="contacto.html" class="active">Contacto</a></li>
       <li><a href="login.html" class="btn-cta">Acceso Admin</a></li>
     </ul>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <span class="hero-badge">Expertos en Construcción y Reformas</span>
-      <h1>Calidad, Seguridad y Acabados de Primera</h1>
-      <p>Transformamos viviendas, locales y espacios comerciales en San Pedro del Pinatar y Murcia. Especialistas en albañilería integral, carpintería, fontanería, electricidad y cerrajería estructural.</p>
-      <div class="hero-botones">
-        <a href="https://wa.me/34695586031?text=Hola,%20solicito%20presupuesto%20para%20un%20proyecto" target="_blank" class="btn-cta">Pedir Presupuesto WhatsApp</a>
-        <a href="servicios.html" class="btn-secundario">Ver Catálogo de Servicios</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Zona con Textura de Obra y Fondo Gris Visible -->
-  <main class="zona-servicios-fondo">
+  <!-- Envoltorio de Contacto -->
+  <main class="contacto-wrapper">
     <div class="contenedor">
       <div class="seccion-titulo">
-        <h2>¿Por Qué Elegir El Morenito?</h2>
-        <p>Aportamos solvencia técnica, seriedad y atención personalizada en cada proyecto que desarrollamos.</p>
+        <h1>Contacta con Nuestro Equipo</h1>
+        <p>Cuéntanos los detalles de tu proyecto o reforma y prepararemos una valoración detallada y sin compromiso.</p>
       </div>
 
-      <div class="grid-ventajas">
-        <div class="card-ventaja">
-          <span class="icono">📋</span>
-          <h3>Presupuesto Sin Compromiso</h3>
-          <p>Estudiamos tu caso al detalle, visitamos la obra y te ofrecemos una valoración transparente y detallada.</p>
-        </div>
+      <div class="grid-contacto">
+        <!-- Formulario -->
+        <section class="card-contacto">
+          <h2>Solicitar Presupuesto Online</h2>
+          <form id="formContacto">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nombre">Nombre y Apellidos</label>
+                <input type="text" id="nombre" class="form-control" placeholder="Ej: Lehder Hernández" required>
+              </div>
+              <div class="form-group">
+                <label for="telefono">Teléfono de Contacto</label>
+                <input type="tel" id="telefono" class="form-control" placeholder="Ej: 695 58 60 31" required>
+              </div>
+            </div>
 
-        <div class="card-ventaja">
-          <span class="icono">🏗️</span>
-          <h3>Materiales de 1ª Calidad</h3>
-          <p>Trabajamos exclusivamente con fabricantes líderes para asegurar acabados duraderos y resistentes.</p>
-        </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" class="form-control" placeholder="nombre@correo.com" required>
+              </div>
+              <div class="form-group">
+                <label for="servicio">Tipo de Servicio</label>
+                <select id="servicio" class="form-control" required>
+                  <option value="">Selecciona una opción...</option>
+                  <option value="Reformas Integrales">Reformas Integrales</option>
+                  <option value="Albañilería General">Albañilería General</option>
+                  <option value="Cerrajería y Soldadura">Cerrajería y Soldadura</option>
+                  <option value="Fontanería / Climatización">Fontanería / Climatización</option>
+                  <option value="Carpintería a Medida">Carpintería a Medida</option>
+                  <option value="Placas Solares">Placas Solares</option>
+                  <option value="Pintura o Acabados">Pintura o Acabados</option>
+                  <option value="Otro Trabajo">Otro Trabajo</option>
+                </select>
+              </div>
+            </div>
 
-        <div class="card-ventaja">
-          <span class="icono">⏱️</span>
-          <h3>Compromiso en Plazos</h3>
-          <p>Planificamos el proyecto de inicio a fin para cumplir rigurosamente con los tiempos acordados.</p>
-        </div>
+            <div class="form-group">
+              <label for="mensaje">Detalles de la Obra o Reforma</label>
+              <textarea id="mensaje" rows="4" class="form-control" placeholder="Indica medidas aproximadas, ubicación de la vivienda o local y cualquier detalle relevante..." required></textarea>
+            </div>
 
-        <div class="card-ventaja">
-          <span class="icono">🛡️</span>
-          <h3>Garantía Profesional</h3>
-          <p>Todos nuestros trabajos de albañilería, cerrajería e instalaciones cuentan con cobertura garantizada.</p>
-        </div>
+            <button type="submit" class="btn-enviar">
+              <span>Enviar Consulta por WhatsApp</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            </button>
+          </form>
+        </section>
+
+        <!-- Información Directa -->
+        <aside class="card-contacto">
+          <h2>Información y Ubicación</h2>
+
+          <div class="info-item">
+            <div class="info-icono">📍</div>
+            <div class="info-texto">
+              <h3>Dirección</h3>
+              <p>C. Torres Fontes, 42a, 30740 San Pedro del Pinatar, Murcia</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icono">📞</div>
+            <div class="info-texto">
+              <h3>Teléfono Directo</h3>
+              <p><a href="tel:+34695586031">+34 695 58 60 31</a></p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icono">✉️</div>
+            <div class="info-texto">
+              <h3>Correo Electrónico</h3>
+              <p><a href="mailto:info@refomaselmorenito.com">info@refomaselmorenito.com</a></p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icono">⏰</div>
+            <div class="info-texto">
+              <h3>Horario de Atención</h3>
+              <p>Lunes a Viernes: 08:00 - 19:00<br>Sábados: 09:00 - 14:00</p>
+            </div>
+          </div>
+
+          <div class="whatsapp-box">
+            <p>¿Prefieres una respuesta inmediata?</p>
+            <a href="https://wa.me/34695586031?text=Hola,%20solicito%20presupuesto" target="_blank" class="btn-cta" style="font-size: 0.9rem; padding: 0.5rem 1.2rem;">
+              Chatear por WhatsApp
+            </a>
+          </div>
+        </aside>
       </div>
-
-      <!-- Banner CTA -->
-      <section class="banner-cta">
-        <h2>¿Tienes un proyecto o reforma en mente?</h2>
-        <p>Cuéntanos lo que necesitas y te asesoramos de forma personalizada en menos de 24 horas.</p>
-        <a href="https://wa.me/34695586031?text=Hola,%20quiero%20información%20sobre%20sus%20servicios" target="_blank" class="btn-cta" style="font-size: 1.05rem; padding: 0.8rem 2rem;">
-          Contactar Directo por WhatsApp
-        </a>
-      </section>
     </div>
   </main>
 
@@ -446,7 +489,7 @@
   </a>
 
   <!-- Footer -->
-  <footer class="footer" id="contacto">
+  <footer class="footer">
     <div class="footer-grid">
       <div>
         <h4>El Morenito</h4>
@@ -472,5 +515,24 @@
     </div>
   </footer>
 
+  <script>
+    document.getElementById('formContacto').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre').value.trim();
+      const telefono = document.getElementById('telefono').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const servicio = document.getElementById('servicio').value;
+      const mensaje = document.getElementById('mensaje').value.trim();
+
+      const texto = `Hola, mi nombre es ${nombre}.
+Me interesa el servicio de: ${servicio}.
+Mi teléfono: ${telefono}
+Mi correo: ${email}
+Detalles del proyecto: ${mensaje}`;
+
+      const enlaceWhatsApp = `https://wa.me/34695586031?text=${encodeURIComponent(texto)}`;
+      window.open(enlaceWhatsApp, '_blank');
+    });
+  </script>
 </body>
 </html>

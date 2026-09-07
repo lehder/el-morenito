@@ -3,23 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>El Morenito | Reformas Integrales, Construcción y Cerrajería en Murcia</title>
-  <meta name="description" content="Especialistas en reformas completas de viviendas, albañilería, fontanería, cerrajería y pintura en San Pedro del Pinatar y toda la región de Murcia.">
+  <title>Servicios de Reformas y Construcción | El Morenito</title>
+  <meta name="description" content="Empresa de reformas integrales, albañilería, fontanería, electricidad y cerrajería en San Pedro del Pinatar, Murcia. Pide presupuesto sin compromiso.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   
   <style>
     :root {
       --color-primario: #1e293b;
       --color-acento: #f59e0b;
       --color-acento-hover: #d97706;
-      --color-fondo: #f1f5f9;
-      --color-tarjeta: rgba(255, 255, 255, 0.96);
+      --color-fondo: #f8fafc;
+      --color-tarjeta: #ffffff;
       --color-texto: #334155;
-      --color-texto-mutado: #64748b;
       --color-texto-claro: #f8fafc;
-      --color-borde: #cbd5e1;
+      --color-borde: #e2e8f0;
       --fuente-titulos: 'Barlow', sans-serif;
       --fuente-cuerpo: 'Inter', sans-serif;
       --transicion: all 0.3s ease;
@@ -41,7 +40,6 @@
       flex-direction: column;
     }
 
-    /* Navbar */
     .navbar {
       position: sticky;
       top: 0;
@@ -52,7 +50,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 0.8rem 2.5rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
 
     .logo-brand {
@@ -94,199 +92,182 @@
 
     .btn-cta {
       background-color: var(--color-acento);
-      color: #fff !important;
+      color: #fff;
       padding: 0.6rem 1.4rem;
       border-radius: 6px;
       text-decoration: none;
       font-weight: 600;
       transition: var(--transicion);
-      display: inline-block;
     }
 
     .btn-cta:hover {
       background-color: var(--color-acento-hover);
     }
 
-    .btn-secundario {
-      background-color: transparent;
-      color: #fff;
-      border: 2px solid #fff;
-      padding: 0.6rem 1.4rem;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
+    .menu-hamburguesa {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .menu-hamburguesa span {
+      display: block;
+      width: 26px;
+      height: 3px;
+      margin: 5px 0;
+      background-color: var(--color-texto-claro);
       transition: var(--transicion);
-      display: inline-block;
-    }
-
-    .btn-secundario:hover {
-      background-color: rgba(255,255,255,0.15);
-      border-color: var(--color-acento);
-      color: var(--color-acento);
-    }
-
-    /* Hero */
-    .hero {
-      background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.86) 100%),
-                  url('https://images.unsplash.com/photo-1541888946425-d0fbb18615f8?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-      color: #fff;
-      padding: 6.5rem 2rem;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .hero-content {
-      max-width: 850px;
-    }
-
-    .hero-badge {
-      display: inline-block;
-      background: rgba(245, 158, 11, 0.2);
-      color: var(--color-acento);
-      border: 1px solid var(--color-acento);
-      padding: 0.35rem 1rem;
-      border-radius: 30px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero h1 {
-      font-family: var(--fuente-titulos);
-      font-size: 3.2rem;
-      line-height: 1.15;
-      font-weight: 800;
-      margin-bottom: 1.2rem;
-      text-transform: uppercase;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: #cbd5e1;
-      margin-bottom: 2.2rem;
-      line-height: 1.7;
-    }
-
-    .hero-botones {
-      display: flex;
-      justify-content: center;
-      gap: 1.2rem;
-      flex-wrap: wrap;
-    }
-
-    /* ZONA GRIS CON TEXTURA DE FONDO VISIBLE */
-    .zona-servicios-fondo {
-      position: relative;
-      background-color: #e2e8f0;
-      background-image: linear-gradient(rgba(241, 245, 249, 0.88), rgba(241, 245, 249, 0.88)), 
-                        url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=80');
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center;
-      padding: 5rem 1.5rem;
-      flex: 1 0 auto;
     }
 
     .contenedor {
       max-width: 1280px;
-      margin: 0 auto;
       width: 100%;
+      margin: 2.5rem auto;
+      padding: 0 2rem;
+      flex: 1 0 auto;
     }
 
-    .seccion-titulo {
+    .seccion-header {
       text-align: center;
-      margin-bottom: 3.5rem;
+      margin-bottom: 2.5rem;
     }
 
-    .seccion-titulo h2 {
+    .seccion-header h1 {
       font-family: var(--fuente-titulos);
       font-size: 2.4rem;
       color: var(--color-primario);
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.5rem;
     }
 
-    .seccion-titulo p {
-      color: var(--color-texto-mutado);
-      font-size: 1.1rem;
-      max-width: 650px;
-      margin: 0 auto;
-    }
-
-    /* Tarjetas de ventajas */
-    .grid-ventajas {
+    .grid-servicios {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 2rem;
-      margin-bottom: 4rem;
+      width: 100%;
     }
 
-    .card-ventaja {
+    @media (max-width: 1024px) {
+      .grid-servicios {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .grid-servicios {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .tarjeta-servicio {
       background: var(--color-tarjeta);
-      backdrop-filter: blur(6px);
-      border: 1px solid rgba(203, 213, 225, 0.9);
       border-radius: 12px;
-      padding: 2.2rem 1.8rem;
-      text-align: center;
+      border: 1px solid var(--color-borde);
+      overflow: hidden;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
       transition: var(--transicion);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
 
-    .card-ventaja:hover {
+    .tarjeta-servicio:hover {
       transform: translateY(-5px);
-      box-shadow: 0 12px 24px -3px rgba(0,0,0,0.12);
+      box-shadow: 0 12px 20px -2px rgba(0, 0, 0, 0.12);
+    }
+
+    /* CONTENEDOR OBLIGATORIO DE IMAGEN */
+    .tarjeta-imagen-wrapper {
+      position: relative;
+      width: 100%;
+      height: 230px !important;
+      max-height: 230px !important;
+      overflow: hidden !important;
+      background-color: #cbd5e1;
+    }
+
+    .tarjeta-imagen {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      display: block !important;
+      transition: transform 0.5s ease;
+    }
+
+    .tarjeta-servicio:hover .tarjeta-imagen {
+      transform: scale(1.06);
+    }
+
+    .badge-categoria-flotante {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: rgba(30, 41, 59, 0.9);
+      color: var(--color-acento);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.35rem 0.85rem;
+      border-radius: 20px;
+      backdrop-filter: blur(4px);
+    }
+
+    .tarjeta-servicio-cuerpo {
+      padding: 1.8rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .tarjeta-servicio h3 {
+      font-family: var(--fuente-titulos);
+      font-size: 1.35rem;
+      color: var(--color-primario);
+      margin-bottom: 0.75rem;
+    }
+
+    .tarjeta-servicio p {
+      font-size: 0.95rem;
+      color: var(--color-texto);
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    .paginacion-contenedor {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 3.5rem 0 1.5rem;
+    }
+
+    .btn-paginacion {
+      background-color: var(--color-tarjeta);
+      border: 1px solid var(--color-borde);
+      color: var(--color-primario);
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: var(--transicion);
+    }
+
+    .btn-paginacion:hover:not(:disabled) {
+      background-color: var(--color-acento);
+      color: #fff;
       border-color: var(--color-acento);
     }
 
-    .card-ventaja .icono {
-      font-size: 2.6rem;
-      margin-bottom: 1.2rem;
-      display: inline-block;
+    .btn-paginacion:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
     }
 
-    .card-ventaja h3 {
-      font-family: var(--fuente-titulos);
-      font-size: 1.3rem;
-      color: var(--color-primario);
-      margin-bottom: 0.6rem;
+    .info-paginacion {
+      font-weight: 600;
+      margin: 0 0.8rem;
     }
 
-    .card-ventaja p {
-      color: var(--color-texto-mutado);
-      font-size: 0.95rem;
-    }
-
-    /* Banner CTA */
-    .banner-cta {
-      background: var(--color-primario);
-      color: #fff;
-      border-radius: 16px;
-      padding: 3.5rem 2rem;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.2);
-    }
-
-    .banner-cta h2 {
-      font-family: var(--fuente-titulos);
-      font-size: 2.2rem;
-      color: #fff;
-      margin-bottom: 0.8rem;
-    }
-
-    .banner-cta p {
-      color: #cbd5e1;
-      font-size: 1.1rem;
-      max-width: 600px;
-      margin-bottom: 2rem;
-    }
-
-    /* Footer */
     .footer {
       background-color: var(--color-primario);
       color: var(--color-texto-claro);
@@ -356,96 +337,71 @@
     }
 
     @media (max-width: 768px) {
-      .hero h1 { font-size: 2.3rem; }
-      .hero p { font-size: 1rem; }
-      .navbar { padding: 0.8rem 1.2rem; }
-      .nav-links { display: none; }
+      .menu-hamburguesa {
+        display: block;
+      }
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--color-primario);
+        flex-direction: column;
+        padding: 1.5rem 0;
+        gap: 1rem;
+        display: none;
+      }
+      .nav-links.activo {
+        display: flex;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
+  <!-- Barra de Navegación -->
   <header class="navbar">
-    <a href="index.html" class="logo-brand">
+    <a href="servicios.html" class="logo-brand">
       <!-- <img src="https://refomaselmorenito.com/wp-content/uploads/2024/02/cropped-logo-morenito.png" alt="Logo El Morenito" class="logo-img" onerror="this.src='https://el-morenito.web.app/assets/images/logo.png'"> -->
-      <img src="public/assets/images/logo-el-morenito.png" alt="" class="logo-img" >
+       <img src="./../../public/assets/images/logo-el-morenito.png" alt="" class="logo-img" >
       <span>EL MORENITO</span>
     </a>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Inicio</a></li>
-      <li><a href="servicios.html">Servicios</a></li>
+    <button class="menu-hamburguesa" id="btnHamburguesa" aria-label="Abrir menú de navegación">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links" id="menuNavegacion">
+      <li><a href="../../index.html">Inicio</a></li>
+      <li><a href="servicios.html" class="active">Servicios</a></li>
       <li><a href="contacto.html">Contacto</a></li>
       <li><a href="login.html" class="btn-cta">Acceso Admin</a></li>
     </ul>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <span class="hero-badge">Expertos en Construcción y Reformas</span>
-      <h1>Calidad, Seguridad y Acabados de Primera</h1>
-      <p>Transformamos viviendas, locales y espacios comerciales en San Pedro del Pinatar y Murcia. Especialistas en albañilería integral, carpintería, fontanería, electricidad y cerrajería estructural.</p>
-      <div class="hero-botones">
-        <a href="https://wa.me/34695586031?text=Hola,%20solicito%20presupuesto%20para%20un%20proyecto" target="_blank" class="btn-cta">Pedir Presupuesto WhatsApp</a>
-        <a href="servicios.html" class="btn-secundario">Ver Catálogo de Servicios</a>
-      </div>
+  <!-- Contenedor Principal de Servicios -->
+  <main class="contenedor">
+    <div class="seccion-header">
+      <h1>Nuestros Servicios Especializados</h1>
+      <p>Soluciones profesionales en construcción, albañilería, cerrajería y reformas de alta calidad.</p>
     </div>
-  </section>
 
-  <!-- Zona con Textura de Obra y Fondo Gris Visible -->
-  <main class="zona-servicios-fondo">
-    <div class="contenedor">
-      <div class="seccion-titulo">
-        <h2>¿Por Qué Elegir El Morenito?</h2>
-        <p>Aportamos solvencia técnica, seriedad y atención personalizada en cada proyecto que desarrollamos.</p>
-      </div>
-
-      <div class="grid-ventajas">
-        <div class="card-ventaja">
-          <span class="icono">📋</span>
-          <h3>Presupuesto Sin Compromiso</h3>
-          <p>Estudiamos tu caso al detalle, visitamos la obra y te ofrecemos una valoración transparente y detallada.</p>
-        </div>
-
-        <div class="card-ventaja">
-          <span class="icono">🏗️</span>
-          <h3>Materiales de 1ª Calidad</h3>
-          <p>Trabajamos exclusivamente con fabricantes líderes para asegurar acabados duraderos y resistentes.</p>
-        </div>
-
-        <div class="card-ventaja">
-          <span class="icono">⏱️</span>
-          <h3>Compromiso en Plazos</h3>
-          <p>Planificamos el proyecto de inicio a fin para cumplir rigurosamente con los tiempos acordados.</p>
-        </div>
-
-        <div class="card-ventaja">
-          <span class="icono">🛡️</span>
-          <h3>Garantía Profesional</h3>
-          <p>Todos nuestros trabajos de albañilería, cerrajería e instalaciones cuentan con cobertura garantizada.</p>
-        </div>
-      </div>
-
-      <!-- Banner CTA -->
-      <section class="banner-cta">
-        <h2>¿Tienes un proyecto o reforma en mente?</h2>
-        <p>Cuéntanos lo que necesitas y te asesoramos de forma personalizada en menos de 24 horas.</p>
-        <a href="https://wa.me/34695586031?text=Hola,%20quiero%20información%20sobre%20sus%20servicios" target="_blank" class="btn-cta" style="font-size: 1.05rem; padding: 0.8rem 2rem;">
-          Contactar Directo por WhatsApp
-        </a>
-      </section>
+    <div class="grid-servicios" id="gridServicios">
+      <!-- Inyección dinámica de tarjetas -->
     </div>
+
+    <!-- Paginación dinámica -->
+    <div class="paginacion-contenedor" id="paginador"></div>
   </main>
 
   <!-- Botón Flotante WhatsApp -->
-  <a href="https://wa.me/34695586031?text=Hola,%20solicito%20presupuesto" class="whatsapp-flotante" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+  <a href="https://wa.me/34695586031?text=Hola,%20solicito%20presupuesto%20para%20una%20reforma" class="whatsapp-flotante" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="currentColor">
       <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
     </svg>
   </a>
 
-  <!-- Footer -->
+  <!-- Pie de página -->
   <footer class="footer" id="contacto">
     <div class="footer-grid">
       <div>
@@ -472,5 +428,6 @@
     </div>
   </footer>
 
+  <script src="../main.js"></script>
 </body>
 </html>
