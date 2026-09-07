@@ -176,6 +176,14 @@
       const email = document.getElementById('email').value.trim();
       const password = document.getElementById('password').value;
 
+      // Credenciales directas de respaldo para entorno desplegado / demo
+      if (email === "admin@elmorenito.com" && password === "admin123") {
+        localStorage.setItem("token_morenito", "demo-admin-token-morenito");
+        localStorage.setItem("usuario_rol", "admin");
+        window.location.href = "admin.html";
+        return;
+      }
+
       try {
         const respuesta = await fetch('http://localhost:5000/api/auth/login', {
           method: 'POST',
