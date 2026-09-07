@@ -355,11 +355,41 @@
       transform: scale(1.08);
     }
 
+    .menu-hamburguesa {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+    .menu-hamburguesa span {
+      display: block;
+      width: 26px;
+      height: 3px;
+      margin: 5px 0;
+      background-color: var(--color-texto-claro, #ffffff);
+      transition: all 0.3s ease;
+    }
     @media (max-width: 768px) {
+      .navbar {
+        position: relative;
+        padding: 0.8rem 1.2rem;
+      }
       .hero h1 { font-size: 2.3rem; }
       .hero p { font-size: 1rem; }
-      .navbar { padding: 0.8rem 1.2rem; }
-      .nav-links { display: none; }
+      .menu-hamburguesa { display: block; }
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--color-primario, #1a2238);
+        flex-direction: column;
+        padding: 1.5rem 0;
+        gap: 1rem;
+        display: none;
+      }
+      .nav-links.activo { display: flex; }
     }
   </style>
 </head>
@@ -372,7 +402,8 @@
       <img src="public/assets/images/logo-el-morenito.png" alt="" class="logo-img" >
       <span>EL MORENITO</span>
     </a>
-    <ul class="nav-links">
+    <button class="menu-hamburguesa" id="btnHamburguesa" aria-label="Abrir menú de navegación"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="menuNavegacion">
       <li><a href="index.html" class="active">Inicio</a></li>
       <li><a href="servicios.html">Servicios</a></li>
       <li><a href="contacto.html">Contacto</a></li>
@@ -472,5 +503,6 @@
     </div>
   </footer>
 
+  <script src="src/main.js"></script>
 </body>
 </html>
